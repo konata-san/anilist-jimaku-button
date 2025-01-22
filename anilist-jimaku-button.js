@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      1.8
 // @description  Adds a button to individual anime pages on AniList that links to the corresponding Jimaku entry
-// @author       https://github.com/RadianttK
+// @author       https://github.com/konata-san
 // @match        https://anilist.co/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=anilist.co
 // @grant        GM.getValue
