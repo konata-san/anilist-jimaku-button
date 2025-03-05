@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AniList Jimaku Button
 // @namespace    http://tampermonkey.net/
-// @version      1.8
+// @version      1.9
 // @description  Adds a button to individual anime pages on AniList that links to the corresponding Jimaku entry
 // @author       https://github.com/konata-san
 // @match        https://anilist.co/*
@@ -128,4 +128,40 @@
         }
         return jimakuButton;
     }
+
+  const observer = new MutationObserver((mutationsList) => {
+    for (let mutation of mutationsList) {
+      if (mutation.type === 'childList') {
+        const jimakuButton = document.getElementById('jimaku-button');
+        if (!jimakuButton || jimakuButton.dataset.duplicated) return;
+        const hohExtraBox = document.querySelector('.hohExtraBox');
+        if (hohExtraBox) {
+          const aniwatcher = document.getElementById('aniwatcher_button_hopefully_this_is_uniue');
+          if (aniwatcher) {
+            const clonedElement = aniwatcher.cloneNode(true);
+            clonedElement.id = 'jimaku-button';
+            clonedElement.setAttribute('href', jimakuButton.getAttribute('href'));
+            clonedElement.textContent = 'Jimaku ';
+            clonedElement.dataset.duplicated = "true";
+            aniwatcher.after(clonedElement);
+            jimakuButton.remove();
+          }
+          else {
+            let h = document.createElement("a");
+            h.id = 'jimaku-button';
+            h.setAttribute('href', jimakuButton.getAttribute('href'));
+            h.textContent = 'Jimaku ';
+            h.dataset.duplicated = "true";
+            h.setAttribute("data-v-5776f768", "");
+            h.className = "link";
+            h.setAttribute("target", "_blank");
+            h.style.transitionDuration = "150ms";
+            hohExtraBox.insertBefore(h, hohExtraBox.firstChild.nextSibling);
+            jimakuButton.remove();
+          }
+        }
+      }
+    }
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
 })();
