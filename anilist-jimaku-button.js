@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         AniList Jimaku Button
 // @namespace    http://tampermonkey.net/
-// @version      1.8
+// @version      1.9
 // @description  Adds a button to individual anime pages on AniList that links to the corresponding Jimaku entry
 // @author       https://github.com/konata-san
 // @match        https://anilist.co/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=anilist.co
+// @icon         data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAACXBIWXMAAAsSAAALEgHS3X78AAAEMklEQVRoge2ay28TRxzHf7O7s47t2CgxiWOvLXAaSiGhpJQ6xJCH5ZiG2CkNpUE9V+rf0UNPubRVT6FSe2rVh0CCQCtIIQSl6qUSARIoUiEPk1alEk6MmviR9fRgKQqz9npf1irSfuWD/Z3Hbz67vxnPrI18oUOwk8WYPQC9sgDMlgVgtiwAs2UBmC0LwGxZAGbLAjBbOx6AM6QXjDGDEGVuiqIoioAYwm6LUiyi4qYhQUsyAMBeV/f1+c/9vhbKv3z12tj5b9Ojn4ie4JaJNjLuiTFb6r7+uCUZANB5uKMr/CaPMeWfOT009vvz/IFeyl+PnLN9bxiAAXMgMTggHT0ACII/3N0t9QmuA6DzTbP0AtjtdW/Ho2WLOJZNDpzQ2X9V6QWIHAu3eJsrlY4EOYcxy0RF6QJACCWH4gxTsZPdNohVpDNGugBcrvpYf498nbMCkSywRkoXQH9PxNPYIF9nyAe7eT1Bqkg7AMMww0Mnq1bz8BD3Es1Rqg9Dc0tvc9PxSBdl/vl4IZfLUea5ILA1yyLtANG+E7vcLsr85rsLd+7OUeZxDwh2zXGqSCMAy3HS/Mnl8lO3f73y8yQhL+VMIw8JX62ySCPAnqDQebiDMp8sLD5ZWJqanvlvfZ0qGhFqlUUaAQaivW5XPWVO3pgWRXE59fTe/QdUUbgBQk5toapICwDGXOJUnDLzhcLN6RkAKBbJxE/XqSxyY3hXqEkWaQHYv6/t4IFXKXNl5e/5h49K72/P/JbJvKAqjAaAq8HxSUuX8Vifw04vK/MPH3kaG4MBIRgQAODxwiJVod0NHW5NY5SV6q0WxjgpyR8AOBnr6++NbH202WxUBTsL7/jJ7KrBc1n1HXj9UPsrrXulPs/z9U7n1gtzZS7NB0HgjF6LVAMkT8VxueOLErXVwxtVtk6qpS6FbDY+MRjTHIxF8H6AzDobsqEjQCouSvh5is38q7BPdQBHj3T6fT5VTSiNCPDxvqPpvV/K1GHW/vGMf8il/1LSoQoAhNDp5KB0c7+5KWaz2bL1HQ47erlBqxOOedDNZ3Jxiw1Cwf+a8QBut2sgSj9iAICLl658+sU4SDIC8/ir8c/aWkPbTQQwGiBTz5D8t5ryQ5AKgO6ut7zeJjoSIT9enFhOrZRtcv2XW20fhShzsAV28bCaVx5ZTkpXIYZhhhNlji9Ly0/v3K34kEe6MwWAoAOi9HXQLqUA3uamnu6w1J+8cWtjo8wEKGlu/o/FpRRlIoD3BCKXIoQw+Q2FA1OaQu0H96dX11bXMtvNIilevnpNppUoij9cuHR2ZJjy92SJJw3pQlkKglNz/OKswoEhhf9WYVmWY1mpny8UpEmipGGuKJ32AABAAIkFqFAoldI7IJYeNauXTENDdhU7/vcBC8BsWQBmywIwWxaA2bIAzJYFYLYsALO14wH+B+qJGDfRYjT0AAAAAElFTkSuQmCC
 // @grant        GM.getValue
 // @grant        GM.setValue
 // @run-at       document-start
